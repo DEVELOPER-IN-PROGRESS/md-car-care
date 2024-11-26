@@ -1,5 +1,12 @@
 /*  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root{
+    --font1: Arial, sans-serif;
     --bg: #FFFFFF;
     --pg-sm: 100%;
     --pg-md:750px;
@@ -7,8 +14,269 @@
     --pg-xl:1200px;
     --pg-xxl:1450px;
     --highlight: #dc0000;
+    --curve1:5px;
+    --curve2:20px;
 }
 
 body{
+    font-family: var(--font1);
     background-color: var(--bg);
+}
+
+.promobar{
+    background-color: #000000;
+}
+
+.promobar .text-banner{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.promobar .text-banner{
+    color: #FFFFFF;
+}
+
+.promobar .text-banner .t1{
+    text-transform: uppercase;
+}
+
+.promobar .text-banner a{
+    text-decoration: none;
+    color: var(--highlight);
+}
+
+.promobar .text-banner .number{
+    color: var(--highlight);
+}
+
+.container{
+    width: var(--pg-sm);
+    margin: 0 auto;
+}
+
+@media (min-width:768px){
+    .container{
+        width: var(--pg-md);
+    }
+}
+
+@media (min-width:992px){
+    .container{
+        width: var(--pg-lg);
+    }
+}
+
+@media (min-width:1200px){
+    .container{
+        width: var(--pg-xl);
+    }
+}
+
+@media (min-width:1500px){
+    .container{
+        width: var(--pg-xxl);
+    }
+}
+
+@media (min-width:1800px){
+    .container{
+        width: 1700px;
+    }
+}
+
+
+/* Header Styles */
+  .header{
+    position: relative;
+    width: 100%;
+  }
+
+  .row1{
+    display: flex;
+    height: 70px;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    padding: 10px 20px;
+  }
+
+  .logo{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+  }
+
+  .logo .md-logo{
+    width: 100%;
+    height: auto;
+  }
+
+  .header-icons .icon{
+    margin-left: 15px;
+    cursor: pointer;
+  }
+
+  /* Row 2 */
+  /* .row2{
+    background-color: #f8f9fa;
+  } */
+
+  .menu-bar .menu{
+    list-style: none;
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-item{
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  .menu-item .arrow{
+    /* display: none; */
+    width: 10px;
+    height: 10px;
+  }
+
+  .menu-item:hover{
+    color: red;
+  }
+
+  .submenu{
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    text-transform: none;
+  }
+
+  .menu-item:hover .submenu{
+    display: block;
+  }
+
+  .submenu li{
+    padding: 10px 20px;
+  }
+
+  /* Hamburger Menu */
+  .hamburger{
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .hamburger .line{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+  }
+
+  .mobile-menu{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+  }
+
+  .mobile-menu ul{
+    margin-top: 50px;
+    list-style: none;
+  }
+
+  .mobile-menu ul li{
+    margin: 20px 0;
+    cursor: pointer;
+  }
+
+@media (max-width: 992px){
+    .header-container .row1{
+        justify-content: flex-start;
+    }
+
+    .promobar .text-banner{
+        text-align: center;
+    }
+
+    .header .row1 .header-icons{
+        margin-right: 35px;
+    }
+
+    .promobar .text-banner .t1{
+        margin-bottom: 5px;
+    }
+
+    .row2{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .mobile-menu{
+        display: none;
+    }
+
+    .mobile-menu.active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-item .arrow{
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+    .promobar .text-banner{
+        justify-content: space-between;
+        padding: 10px 10px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width:992px) {
+    .promobar .text-banner{
+        padding: 10px 0px;
+    }
+
+    .promobar .text-banner{
+        flex-direction: row;
+        /* text-align: left; */
+    }
+}
+
+@media (min-width:1200px) {
+    .promobar .text-banner{
+        font-size: 16px;
+    }
+}
+
+
+@media (min-width:1400px) {
+
 }
