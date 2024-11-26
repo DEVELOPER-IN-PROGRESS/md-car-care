@@ -1,0 +1,14 @@
+/*  */
+:root{
+    --bg: #FFFFFF;
+    --pg-sm: 100%;
+    --pg-md:750px;
+    --pg-lg: 900px;
+    --pg-xl:1200px;
+    --pg-xxl:1450px;
+    --highlight: #dc0000;
+}
+
+body{
+    background-color: var(--bg);
+}
