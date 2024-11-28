@@ -30,7 +30,7 @@ body{
 .promobar .text-banner{
     display: flex;
     flex-direction: column;
-    padding: 15px 10px;
+    padding: 6px;
     width: 100%;
     font-size: 12px;
 }
@@ -104,6 +104,17 @@ body{
 
   .header-container .header-icons .icon{
     text-transform: uppercase;
+  }
+
+  .header .row1 .header-icons{
+    display: flex;
+    align-items: center;
+  }
+
+  .header-container .header-icons a{
+    color: #000000;
+    text-decoration: none;
+    margin-left: 10px;
   }
 
   .logo{
@@ -187,7 +198,7 @@ body{
     transform: translateY(-50%);
     right: 20px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 30;
   }
 
   .hamburger .line{
@@ -201,12 +212,15 @@ body{
     display: none;
     position: absolute;
     top: 0;
+    right: 0;
     left: 0;
+    bottom: 0;
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
     color: white;
     text-align: center;
+    z-index: 10;
   }
 
   .mobile-menu ul{
@@ -227,10 +241,10 @@ body{
   }
 
   section.welcome{
-    background: url('banner1.jpg') no-repeat center center/cover;
-    padding: 10px 0px;
+    background: url('banner1.jpg') no-repeat center;
+    background-size: cover;
+    padding: 15px 15px;
     position: relative;
-    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,11 +272,13 @@ body{
 
   .welcome .welcome-content .block1{
     max-width: 500px;
+    margin-top: 20px;
   }
 
   .welcome .welcome-content .block2{
     border-radius: var(--curve2);
     background-color: #FFFFFF;
+    padding: 20px;
   }
 
   .welcome .welcome-content .block1 .t1,
@@ -271,13 +287,18 @@ body{
     color: #FFFFFF;
   }
 
+  .welcome .welcome-content .block1 .t1{
+    line-height: 1.8;
+  }
+
   .welcome .welcome-content .block1 .cta{
     background-color: var(--highlight);
     border: none;
     box-shadow: none;
     border-radius: var(--curve1);
     padding: 10px 20px;
-    margin: 10px 0px;
+    margin: 25px 0px;
+    height: 44px;
   }
 
   .welcome .welcome-content .block1 .cta a{
@@ -288,8 +309,8 @@ body{
   .welcome .welcome-content .block1 h2{
     color: #FFFFFF;
     font-weight: 600;
-    font-size: 20px;
-    line-height: 1.4;
+    font-size: 30px;
+    line-height: 1.2;
   }
 
   .welcome .rating{
@@ -297,9 +318,9 @@ body{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding:2px 10px;
+    padding: 6px 10px;
     border-radius: var(--curve2);
-    margin:20px 0px;
+    margin:25px 0px;
     color: #FFFFFF;
   }
 
@@ -314,6 +335,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   .welcome .welcome-content .block2 .contact-form h3{
@@ -325,13 +347,16 @@ body{
   .welcome .welcome-content .block2 .contact-form .l1{
     color: #3e3e3e;
     margin-bottom: 20px;
+    font-size: 14px;
   }
 
   .welcome .welcome-content .block2 .contact-form .l2,
   .welcome .welcome-content .block2 .contact-form .l2 a{
     color: var(--highlight);
     text-decoration: none;
-    margin-bottom: 15px;
+    margin-bottom: 36px;
+    font-size: 20px;
+    letter-spacing: 1.2px;
   }
 
   .welcome .welcome-content .block2 .contact-form .intouch{
@@ -339,20 +364,26 @@ body{
     width: 100%;
   }
 
+
   .welcome .welcome-content .block2 .contact-form .form__input{
     border: none;
     margin-top: 10px;
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: #ececec;
+    width: 100%;
+    max-width: 619px;
+    padding: 10px;
   }
 
   .welcome .welcome-content .block2 .contact-form .form__cta{
     border: none;
     margin-top: 10px;
-    border-radius: 2px;
+    border-radius: 4px;
     background-color: #1e1a17;
     width: 100%;
+    font-size: 18px;
     color: #FFFFFF;
+    height: 36px;
   }
 
   .welcome .welcome-content .block2 .contact-form .logo-wrap{
@@ -367,10 +398,212 @@ body{
     height: auto;
   }
 
+  section.md__services{
+    padding-top: 40px;
+  }
+
+  .md__services .dots{
+    display: block;
+    margin: 0px auto;
+    height: auto;
+  }
+
+  .md__services .container{
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+  }
+
+  .md__services .bannervideo{
+    width: 100%;
+  }
+
+  .md__services .lead{
+    width: 75%;
+    font-size: 25px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .md__services .service-grid{
+      /* display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      padding: 20px; */
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      /* padding: 20px; */
+  }
+
+  .service-grid .booking {
+    width: 100%;
+    padding-top: 100%;
+    background-color: transparent;
+    position: relative;
+    /* max-width: 300px; */
+    overflow: hidden;
+  }
+
+  .service-grid .booking  .content{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 70%;
+  }
+
+  .service-grid .booking  .content .line{
+    height: 6px;
+    background-color: var(--highlight);
+    width: 65px;
+    margin-bottom: 15px;
+  }
+
+  .service-grid .booking  .content h3{
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 67px;
+  }
+
+  .service-grid .booking:nth-child(1) .content h3{
+    margin-bottom: 15px;
+  }
+
+  .service-grid .booking  .content p{
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .service-grid .booking  .content button{
+    width: 120px;
+    height: 42px;
+    padding: 10px;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: none;
+  }
+
+  .service-grid .booking .feature{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .md__reviews .title{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .slider-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .slider-btn.prev-btn img{
+    transform: rotate(90deg);
+  }
+
+  .slider-btn.next-btn img{
+    transform: rotate(-90deg);
+  }
+
+  .slider-btn img{
+    width: 23px;
+    height: 30px;
+  }
+
+  .prev-btn {
+    position: absolute;
+    left: 0px;
+  }
+
+  .next-btn {
+    position: absolute;
+    right: 0px;
+  }
+
+  .slider-wrapper {
+    overflow: hidden;
+    flex-grow: 1;
+  }
+
+  .md__reviews .slider .content-wrap{
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .md__reviews .slider .content-wrap h3{
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 16px;
+  }
+
+  .md__reviews .slider .content-wrap .rating{
+    color: #fde03c;
+    margin-bottom: 20px;
+  }
+
+  .md__reviews .slider .content-wrap p{
+    color: #636363;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    background-color: transparent;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .slide {
+      flex: 0 0 calc(100% / 3);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .md__services .service-grid {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1200px) {
+    .md__services .service-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
   /* ṇewsletter */
   .md__cars .md__newsletter{
     background-color: rgb(245 245 245);
     padding: 40px 0px;
+    margin-top: 60px;
   }
 
   .md__newsletter .md__nlcontents{
@@ -416,6 +649,15 @@ body{
     max-width: 140px;
     width: 100%;
     box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.md__newsletter .md__nlcontents .md__subscribe .verify img{
+   width: 15px;
+   height: auto;
+   margin-left: 10px;
 }
 
   .md__newsletter .md__nlcontents .md__subscribe .arrow{
@@ -431,7 +673,7 @@ body{
   }
 
   .md__footer .md__footlogo{
-    width: 150px;
+    width: 100%;
     height: auto;
   }
 
@@ -448,6 +690,20 @@ body{
     color: #FFFFFF;
     text-decoration: none;
     font-style:normal;
+  }
+
+  .md__footer .footer__block .cell .media{
+    display: flex;
+    align-items: center;
+  }
+
+  .md__footer .footer__block .cell .media a{
+    margin: 0px 8px;
+  }
+
+  .md__footer .footer__block .cell.b1{
+    width: 248px;
+    height: 75px;
   }
 
   .md__footer .footer__block .cell a{
@@ -467,8 +723,12 @@ body{
         border-radius: var(--curve2);
     } */
 
+    section.welcome{
+      min-height: 50vh;
+    }
+
     .welcome .welcome-content{
-      padding: 0px 10px;
+      padding: 0px;
     }
 
     .welcome .welcome-content .block2 .contact-form{
@@ -553,10 +813,16 @@ body{
     .welcome .welcome-content{
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
     }
 
-    .welcome .welcome-section .block1{
+    .welcome .welcome-content .block1{
         text-align: left;
+        width: 49%;
+    }
+
+    .welcome .welcome-content .block1 .t1{
+      max-width: 80%;
     }
 
     .welcome .welcome-content .block2 .contact-form h3{
@@ -603,15 +869,43 @@ body{
     }
 
     section.welcome{
-        /* min-height: 60vh; */
+        padding: 55px 15px;
+    }
+
+    .welcome .welcome-content .block1 {
+      text-align: left;
+      width: 65%;
     }
 
     .welcome .welcome-content .block2{
-      width: 500px;
+      max-width: 350px;
+      width: 100%;
+      padding: 35px;
+    }
+
+    .welcome .rating{
+      margin: 35px 0px ;
     }
 
     .welcome .welcome-content .block2 .contact-form .logo-wrap .md-logo{
       margin-bottom: 0px;
+    }
+
+    .md__services .lead{
+      width: 50%;
+    }
+
+    .md__services .container{
+      margin: 80px auto;
+    }
+
+    .md__reviews .slider .content-wrap{
+      width: 80%;
+    }
+
+
+    .md__cars .md__footer{
+      padding: 60px 0px;
     }
 
     .md__footer .footer__block{
@@ -645,8 +939,25 @@ body{
         font-size: 14px;
     }
 
-    section.welcome{
-        /* min-height: 65vh; */
+    .header-container .header-icons a{
+      margin-left: 25px;
+    }
+
+    .welcome .rating{
+      margin: 45px 0px ;
+    }
+
+    .welcome .welcome-content .block1 h2 {
+      font-size: 35px;
+    }
+
+    .welcome .welcome-content .block2 {
+      max-width: 400px;
+    }
+
+    .service-grid .booking  .content{
+      bottom: 20px;
+      left: 20px;
     }
 
     .md__newsletter .md__nlcontents{
@@ -655,7 +966,12 @@ body{
 
     .md__newsletter .md__nlcontents .md__subscribe .verify {
       max-width: 228px;
-  }
+    }
+
+    .md__cars .md__footer{
+      padding: 70px 0px;
+    }
+
 }
 
 @media (min-width:1400px) {
@@ -664,8 +980,25 @@ body{
     }
 
     section.welcome{
-        min-height: 956px;
+        /* min-height: 956px; */
         padding: 80px 0px;
+    }
+
+    .welcome .welcome-content .block2{
+        padding: 55px;
+        max-width: 450px;
+    }
+
+    .welcome .rating{
+      margin: 55px 0px ;
+    }
+
+    .welcome .welcome-content .block1 .cta{
+      margin-top: 55px;
+    }
+
+    .welcome .welcome-content .block2 .contact-form .logo-wrap{
+      margin-bottom: 40px;
     }
 
     .header-container .menu-item{
@@ -678,8 +1011,51 @@ body{
       margin-top: 2px;
     }
 
+    .welcome .welcome-content .block1 h2 {
+      font-size: 55px;
+    }
+
     .welcome .welcome-content .block2 .contact-form h3{
-      margin-bottom: 45px;
+      margin-bottom: 26px;
+      font-size: 50px;
+    }
+
+    .welcome .welcome-content .block2 .contact-form .l1{
+        font-size: 18px;
+        margin-bottom: 22px;
+    }
+
+    .welcome .welcome-content .block2 .contact-form .form__input{
+      height: 62px;
+    }
+
+    .welcome .welcome-content .block2 .contact-form .form__input{
+      padding:10px 32px;
+      margin-top: 25px;
+      font-size: 18px;
+    }
+
+    .welcome .welcome-content .block2 .contact-form .form__input:first-of-type{
+      margin-top: 16px;
+    }
+
+    .welcome .welcome-content .block2 .contact-form .form__cta{
+      margin-top: 15px;
+      height: 50px;
+      font-size: 25px;
+    }
+
+    .md__reviews .title {
+      margin-bottom: 64px;
+    }
+
+    .md__newsletter .md__nlcontents .update{
+      margin: 25px 0px 25px 0px;
+      font-size: 21px;
+    }
+
+    .md__cars .md__footer{
+      padding: 80px 0px;
     }
 }
 
@@ -697,29 +1073,81 @@ body{
     padding:38px 0px;
   }
 
+  .header-container .header-icons a{
+    margin-left: 45px;
+  }
+
   .header-container .logo{
     height: 64px;
     width: 246px;
   }
 
+  .welcome .welcome-content .block1 h2 {
+    font-size: 75px;
+  }
+
   .welcome .welcome-content .block2{
-    width: 792px;
+    padding: 73px 87px;
+  }
+
+  .welcome .welcome-content .block2{
+    max-width: 792px;
   }
 
   .welcome .welcome-content .block2 .contact-form{
-    padding:40px 87px;
+    padding:0px 0px;
   }
 
+  .welcome .welcome-content .block1 .cta{
+    margin-top: 60px;
+  }
+
+  .welcome .welcome-content .block2 .contact-form .form__cta{
+    margin-top: 25px;
+    height: 80px;
+  }
+
+  .welcome .welcome-content .block2 .contact-form .logo-wrap{
+    margin-bottom: 25px;
+  }
+
+  .md__services .service-grid{
+    gap: 34px;
+  }
+
+  .service-grid .booking  .content{
+    bottom: 30px;
+    left: 58px;
+  }
+
+  .md__reviews .title {
+    margin-bottom: 84px;
+  }
 
   .md__cars .md__newsletter{
     padding: 68px 0px;
+    margin-top: 100px;
   }
 
   .md__cars .md__newsletter h3{
-    margin-top: 8px;
+    font-size: 25px;
+    letter-spacing: 1.2px;
+  }
+
+  .md__footer .container{
+    max-width: 1664px;
+  }
+
+  .md__footer .footer__block .cell.b1{
+    margin-top: 10px;
+  }
+
+  .md__cars .md__footer{
+    padding: 98px 43px;
   }
 
   .md__footer .footer__block ul.nav li, .md__footer .footer__block .cell p {
-    margin-bottom: 36px;
+    margin-bottom: 24px;
+    font-size: 25px;
   }
 }
